@@ -1,0 +1,366 @@
+:root {
+     --primary: rgba(241, 203, 49, 0.437);
+     --bg: #2b2828;
+
+}
+
+*{
+     margin: 0;
+     padding : 0;
+     box-sizing: border-box;
+     outline:none;
+     border:none;
+     text-decoration: none;
+}
+
+body {
+     font-family: "Poppins-regular" , Georgia, 'Times New Roman', Times, serif;
+     background-color: var(--bg);
+     color: #fff;
+     height: 2000px;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+/* navbar */
+
+.navbar {
+     display : flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 7%;
+     background-color: rgba(1, 1, 1, 0.8);
+     border-bottom: 1px solid #f6f4f3;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 9999;
+
+}
+
+.navbar .navbar-logo{
+     font-size: 2rem;
+     font-weight: bold;
+     color:#fff;
+     font-style: italic;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+
+.navbar .navbar-logo span{
+     color: var(--primary);
+}
+
+.navbar .navbar-nav a{
+     color:#fff;
+     display: inline-block;
+     font-size: 1.3rem;
+     margin: 0 1rem;
+     text-transform: capitalize;
+}
+
+.navbar .navbar-nav a:hover{
+     color: var(--primary);
+
+}
+
+.navbar .navbar-nav a::after {
+     content:  ' ';
+     display: block;
+     padding-bottom: 0.5rem;
+     border-bottom: 0.1rem solid var(--primary);
+     transform: scaleX(0);
+     transition: 0.2s ease-in;
+}
+
+.navbar .navbar-nav a:hover::after{
+     transform: scaleX(0.8);
+
+}
+
+.navbar .navbar-extra a{
+     color: #fff;
+     margin: 0  0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+     color: var(--primary);
+}
+
+#hamburger-menu {
+     display: none;
+}
+
+
+
+/* hero section */
+.hero{
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background-image: url(../img/2554.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+     mask-image: linear-gradient(rgba(0, 0, 0,0.7) 85%, rgba(0,0,0, 0) );
+}
+
+
+.hero .content{
+     padding: 1.4rem 7%;
+     max-width: 120rem;
+     width: 100%;
+     text-align: center;
+     position: fixed;
+     top: 120px;
+     
+}
+
+.hero .content h1{
+     font-size: 5em;
+     color: #ffffff;
+     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5 );
+     line-height: 1;
+     text-transform: capitalize;
+     margin-bottom: 2rem;
+}
+
+.hero .content h1 .span2{
+     color: rgba(0, 17, 0, 0.951);
+     text-decoration: underline;
+}
+
+.hero .content h1 .span1{
+     color: rgba(218, 164, 46, 0.89);
+     text-decoration: underline;
+}
+
+.hero .content p{
+     font-size: 1.6rem;
+     margin-top: 1rem;
+     line-height: 1.4;
+     font-weight: 100;
+     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5 );
+     mix-blend-mode: difference;
+     border-bottom: 0.1rem solid #fff; 
+     margin-bottom: 2rem;
+}
+
+
+.hero .content .cta{
+     margin-top: 1rem;
+     display: inline-block;
+     padding: 1rem 3rem;
+     font-size: 1.4rem;
+     color: #fff;
+     background-color: var(--primary);
+     border-radius: 0.9rem;
+     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+     border-bottom: 0.1rem solid #030303;
+}
+
+.hero .content .cta:hover{
+     color:rgba(0, 17, 0, 0.951);
+     background-color: var(--primary);
+     padding: 0.9rem 1.8rem;
+}
+
+.hero .content .cta::after {
+     content:  ' ';
+     display: block;
+     padding-bottom: 0.5rem;
+     border-bottom: 0.1rem solid #fff;
+     transform: scaleX(0);
+     transition: 0.2s linear;
+     transition: 0.2s ease-in;
+}
+.hero .content .cta:hover::after{
+     transform: scaleX(1);
+
+}
+/* about section */
+.about{
+     padding:8rem 7% 1.4rem;
+}
+
+.about h2 span{
+     color: var(--primary);
+
+}
+
+.about h2{
+     text-align: center;
+     font-size: 2.6rem;
+     margin-bottom: 3rem;
+}
+
+.about .about-img img{
+     width: 600px;
+     height: 300px;
+     border-radius: 5%;
+     
+}
+
+.about .row {
+     display: flex;
+}
+
+.about .row .about-img{
+     flex: 1 1 45rem;
+}
+
+.about .row .konten2{
+     flex: 1  1 35rem;
+     padding: 0 1rem;
+}
+
+.about .row .konten2 h3{
+     font-size : 1.8rem;
+     margin-bottom: 1rem;
+     
+}
+
+.about .row .konten2 p{
+     margin-bottom: 0.8rem;
+     font-size: 1.4rem;
+     font-weight: 100;
+     line-height: 1.6;
+}
+
+
+
+
+/* media quries */
+
+
+/* laptop */
+@media (max-width: 1366px) {
+     html{
+          font-size: 75%
+     }
+
+     .about .row .konten2 p{
+          font-size: 1.6rem;
+          text-align: justify;
+     }
+
+
+
+
+}
+
+/* tablet */
+@media (max-width: 768px) {
+     html{
+          font-size: 62.5%
+     }
+
+     #hamburger-menu{
+          display: inline-block;
+     }
+
+
+     .navbar .navbar-nav{
+          position: absolute;
+          top: 100%;
+          right: -100%;
+          background-color: var(--bg);
+          width: 30rem;
+          height: 100vh;
+          transition: 0.3s;
+          
+     }
+
+
+     .navbar .navbar-nav.active{
+          right: 0 ;
+     }
+
+     .navbar .navbar-nav a{
+          color :rgb(224, 204, 204);
+          display: block;
+          margin :1.5rem;
+          padding: 0.5rem;
+          font-size: 2rem;
+     }
+
+     .navbar .navbar-nav a::after{
+          transform-origin: 0.0;
+     }
+
+     .navbar .navbar-nav a:hover::after{
+          transform: scaleX(0.2);
+     }
+
+
+
+
+     .about .row .konten2 p{
+          font-size: 1.6rem;
+          text-align: justify;
+     }
+
+     .about .row{
+          flex-wrap: wrap;
+     }
+
+     .about .row .about-img img{
+          height: 25rem;
+          object-fit: cover;
+          object-position: center;
+     }
+
+     .about .row .konten2{
+          padding: 0;
+          display: inline-block;
+     
+     }
+
+     .about .row .konten2 h3{
+          margin-top: 3rem;
+          font-size: 2rem;
+          
+     }
+
+     .about .row .konten2 p{
+          font-size: 1.6rem;
+          text-align: justify;
+          
+     }
+
+     .about .row .konten2 h3{
+          text-decoration: none;
+          
+
+     }
+
+     .hero .content h1{
+          margin-bottom: 5rem;
+     }
+
+}
+
+/* mobile */
+@media (max-width: 450px) {
+     html{
+          font-size: 55%;
+     }
+
+     .about .row .about-img img{
+          width: 38rem;
+     }
+
+     .hero .content{
+          max-width: 100%;
+     }
+
+     .hero .content h1{
+          margin-bottom: 5rem;
+     }
+
+
+}
